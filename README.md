@@ -1,7 +1,7 @@
 # Sumamry of all files
-Repository storing all used codes for research concerning “Establishing Ground Truth for Seismic Wave Velocities in Root-Soil Systems of the Critical Zone”. All code is written in Python and stored in Google Colab files. Due to my limited experience with complex Python code, many of these scripts were written with AI assistance to streamline the process.
+Repository storing all used code for research concerning “The Effects of Applied Stress and Root-Soil Systems on Seismic Wave Velocities: Establishing Laboratory Ground Truth”. All code is written in Python and stored in Google Colab files. Due to my limited experience with complex Python code and the timeline for this research, I used AI assistance to write many of these scripts to streamline the process.
 
-**Velocities Vs. Mediums Plot.ipynb** - This script is to create a velocity vs. medium plot from benchtop experimental data. This includes dry and wet wood (parallel or perpendicular), soil samples, and aluminum. The script produces a linear and an exponential box-and-whisker plot, as well as a list of average velocities for each medium. 
+**Velocities Vs. Mediums Plot.ipynb** - This script is to create a velocity vs. medium plot from benchtop experimental data. This includes dry and wet wood (in parallel or perpendicular orientations), soil samples, and aluminum. The script produces linear and exponential box-and-whisker plots, as well as a list of average velocities for each medium. 
 
 **SSC Set-Up Figures.ipynb** - This script is used to develop the SSC cross-section and SSC Birds-Eye View figures. The user selects which objects they’d like to show or hide (e.g., shot locations, compaction zone, labels, sensor groups). The code outputs a figure for different experimental setups.
 
