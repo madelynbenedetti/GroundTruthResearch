@@ -1,5 +1,5 @@
-# Sumamry of all files
-Repository storing all used code for research concerning “The Effects of Applied Stress and Root-Soil Systems on Seismic Wave Velocities: Establishing Laboratory Ground Truth”. All code is written in Python and stored in Google Colab files. Due to my limited experience with complex Python code and the timeline for this research, I used AI assistance to write many of these scripts to streamline the process.
+# About this repository
+This repository stores all used code for research concerning “The Effects of Applied Stress and Root-Soil Systems on Seismic Wave Velocities: Establishing Laboratory Ground Truth”. All code is written in Python and stored in Google Colab files. Due to my limited experience with complex Python code and the timeline for this research, I used AI assistance to write many of these scripts to streamline the process.
 
 **Velocities Vs. Mediums Plot.ipynb** - This script is to create a velocity vs. medium plot from benchtop experimental data. This includes dry and wet wood (in parallel or perpendicular orientations), soil samples, and aluminum. The script produces linear and exponential box-and-whisker plots, as well as a list of average velocities for each medium. 
 
