@@ -12,6 +12,17 @@ Building on this gap, our research draws inspiration from the work of Brady Flin
 * Understand how overlying compaction and the presence of wood/roots appear in seismic tomography maps to better inform the findings of Flinchum and Gupta.
 * Develop an effective medium theory of root-soil systems beneath trees for application in non-invasive root mapping and slope stability.
 
+## Methods and Tools
+* Python
+* Google Colab
+* Seismic refraction
+* Travel-time analysis
+* Ray tracing
+* Seismic tomography
+* Velocity analysis
+* Effective Medium Theory
+* Experimental geophysics
+
 ## Experimental design: Seismic Soil Chamber (SSC)
 * ![Photo of Seismic Soil Chamber Experimental Setup (Cross-Section)](Figures/Experimental_Setup_CS.png).
 * ![Photo of Seismic Soil Chamber Experimental Setup (Birds-Eye View)](Figures/Experimental_Setup_BEV.png).
@@ -35,8 +46,8 @@ Experiments are conducted from simplest to most complex as follows:
 ## Computational Workflow
 1. Obtain raw seismic traces in the SSC under a specific experimental condition (see 1-10 above).
 2. Pick first arrivals from raw traces.
-3. Use first arrival times to determine time-travel data.
-4. Use time-travel data to perform ray tracing of first arrival waves through the SSC.
+3. Use first-arrival times to construct seismic travel-time data.
+4. Use time-travel data to ray-trace first-arrival waves through the SSC.
 5. Create a 2D seismic travel-time tomography model.
 6. Interpret results and note key findings. 
 
@@ -46,18 +57,18 @@ Experiments are conducted from simplest to most complex as follows:
 
 [![SSC_First_Arrivals_Ray_Tracing.ipynb](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1SCYFIwuaPq2sq3-PX0jJ5_ulNO739bDy?usp=sharing)
 
-This is the script where all first arrivals are picked. The program accepts .asd trace files and produces an interactive graph for making first-arrival picks. The picks are stored in a .pkl file, which can be used as a save state. Once all picks are made, they are exported to a CSV. During this, the program ray-traces the shortest path from the shot to each sensor based on the first-arrival picks. Experimental data is saved to a [Hugging Face](https://huggingface.co/datasets/mbenedetti212/SSC_All_Experiment_Traces) dataset.
+This is the notebook where all first arrivals are picked. The program accepts .asd trace files and produces an interactive graph for making first-arrival picks. The picks are stored in a .pkl file, which can be used as a save state. Once all picks are made, they are exported to a CSV. During this, the program ray-traces the shortest path from the shot to each sensor based on the first-arrival picks. Experimental data is saved to a [Hugging Face](https://huggingface.co/datasets/mbenedetti212/SSC_All_Experiment_Traces) dataset.
 
 ### 2. Velocity Analysis
 
 [![Velocities Vs. Mediums Plot.ipynb](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1sS81tXWN00Iq8fjm3mn0xB5HLt6GLzO4?usp=sharing)
 
-This script is to create a velocity vs. medium plot from benchtop experimental data. This includes dry and wet wood (in parallel or perpendicular orientations), soil samples, and aluminum. The script produces linear and exponential box-and-whisker plots, as well as a list of average velocities for each medium.
+This notebook is to create a velocity vs. medium plot from benchtop experimental data. This includes dry and wet wood (in parallel or perpendicular orientations), soil samples, and aluminum. The notebook produces linear and exponential box-and-whisker plots, as well as a list of average velocities for each medium.
 
 ### 3. Experimental Setup Visualization
 [![SSC Set-Up Figures.ipynb](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1bOT1tAZ1EQi3hTgt5tNan4IpUhe1ZczT?usp=sharing)
 
-This script is used to develop the SSC cross-section and SSC Birds-Eye View figures. The user selects which objects they’d like to show or hide (e.g., shot locations, compaction zone, labels, sensor groups). The code outputs a figure for different experimental setups.
+This notebook is used to develop the SSC cross-section and SSC Birds-Eye View figures. The user selects which objects they’d like to show or hide (e.g., shot locations, compaction zone, labels, sensor groups). The code outputs a figure for different experimental setups.
 
 ## Data
 All raw data is stored separately [here on Hugging Face](https://huggingface.co/datasets/mbenedetti212/SSC_All_Experiment_Traces).
