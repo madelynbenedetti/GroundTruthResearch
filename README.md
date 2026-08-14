@@ -24,12 +24,33 @@ Building on this gap, our research draws inspiration from the work of Brady Flin
 * Experimental geophysics
 
 ## Experimental design: Seismic Soil Chamber (SSC)
-* ![Photo of Seismic Soil Chamber Experimental Setup (Cross-Section)](Figures/Experimental_Setup_CS.png).
-* ![Photo of Seismic Soil Chamber Experimental Setup (Birds-Eye View)](Figures/Experimental_Setup_BEV.png).
-* ![Figure of Seismic Soil Chamber Experiment 1 Setup (Cross-Section)](Figures/SSC_Experiment_1_σ_0T_CS.png).
-* ![Figure of Seismic Soil Chamber Experiment 1 Setup (Birds-Eye View)](Figures/SSC_Experiment_1_σ_0T_BEV.png).
 
-The Seismic Soil Chamber (SSC) is a 43 cm x 41.5 cm x 58.3 cm wooden box used to compact multiple layers of soil. Two aluminum columns (gray) reside opposite each other inside the SSC, each containing 5 P-wave Evident acoustic sensors (white triangles). Perpendicular to the columns and on top of the soil are two aluminum panels (green) with 2 S-wave Evident acoustic sensors. The SSC is centered on a shop press that can exert up to 30 US-Tons of force. The shop press is used to push a 40 cm column of wood onto a wooden lid to initially compact the soil, or a 7 cm x 8.82 cm wooden block in the center of the SSC to simulate overlying compaction.
+<img src="Figures/Experimental_Setup_Photo_CS.png" alt="Seismic Soil Chamber Experimental Setup — Cross-Section" width="500">
+
+*Figure 1. Photo of the Seismic Soil Chamber experimental setup.*
+
+<img src="Figures/Experimental_Setup_Photo_BEV.png" alt="Seismic Soil Chamber Experimental Setup — Birds-Eye View" width="500">
+
+*Figure 2. Photo from a birds-eye view of the Seismic Soil Chamber experimental setup.*
+
+<img src="Figures/SSC_Experiment_1_CS.png" alt="Seismic Soil Chamber Experiment 1 — Cross-Section" width="500">
+
+*Figure 3. Cross-sectional sensor and experimental configuration for Experiment 1: compacted soil without overlying compaction.*
+
+<img src="Figures/SSC_Experiment_1_BEV.png" alt="Seismic Soil Chamber Experiment 1 — Birds-Eye View" width="500">
+
+*Figure 4. Birds-eye view of the Experiment 1 sensor and experimental configuration.*
+
+<img src="Figures/SSC_Experiment_2_σ_0.5T_CS.png" alt="Seismic Soil Chamber Experiment 2 — Cross-Section" width="500">
+
+*Figure 5. Cross-sectional sensor and experimental configuration for Experiment 2 under 0.5T of overlying compaction.*
+
+<img src="Figures/SSC_Experiment_2_σ_0.5T_BEV.png" alt="Seismic Soil Chamber Experiment 2 — Birds-Eye View" width="500">
+
+*Figure 6. Birds-eye view of Experiment 2 under 0.5T of overlying compaction.*
+
+
+The Seismic Soil Chamber (SSC) is a 43 cm x 41.5 cm x 58.3 cm wooden box used to compact multiple layers of soil. Two aluminum columns (gray) reside opposite each other inside the SSC, each containing 5 P-wave Evident acoustic sensors (white triangles). Perpendicular to the columns and on top of the soil are two aluminum panels (green) with 2 S-wave Evident acoustic sensors. The SSC is centered on a shop press that can exert up to 30 US-Tons of force. The shop press is used to push a 40 cm column of wood onto a wooden lid to initially compact the soil, or a 7 cm x 8.82 cm wooden block in the center of the SSC to simulate overlying compaction. Seismic waves are sent through the chamber by taking hammer shots on the side of the SSC (red X’s).
 
 Experiments are conducted from simplest to most complex as follows:
 1. Compacted soil **only** (no overlying compaction, no wood).
@@ -47,7 +68,7 @@ Experiments are conducted from simplest to most complex as follows:
 1. Obtain raw seismic traces in the SSC under a specific experimental condition (see 1-10 above).
 2. Pick first arrivals from raw traces.
 3. Use first-arrival times to construct seismic travel-time data.
-4. Use time-travel data to ray-trace first-arrival waves through the SSC.
+4. Use seismic travel-time data to ray-trace first-arrival waves through the SSC.
 5. Create a 2D seismic travel-time tomography model.
 6. Interpret results and note key findings. 
 
@@ -57,13 +78,13 @@ Experiments are conducted from simplest to most complex as follows:
 
 [![SSC_First_Arrivals_Ray_Tracing.ipynb](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1SCYFIwuaPq2sq3-PX0jJ5_ulNO739bDy?usp=sharing)
 
-This is the notebook where all first arrivals are picked. The program accepts .asd trace files and produces an interactive graph for making first-arrival picks. The picks are stored in a .pkl file, which can be used as a save state. Once all picks are made, they are exported to a CSV. During this, the program ray-traces the shortest path from the shot to each sensor based on the first-arrival picks. Experimental data is saved to a [Hugging Face](https://huggingface.co/datasets/mbenedetti212/SSC_All_Experiment_Traces) dataset.
+This notebook implements the first-arrival picking workflow. It accepts .asd trace files and produces an interactive graph for making first-arrival picks. The picks are stored in a .pkl file, which can be used as a save state. Once all picks are made, they are exported to a CSV. During this, the program ray-traces the shortest path from the shot to each sensor based on the first-arrival picks. Experimental data is saved to a [Hugging Face](https://huggingface.co/datasets/mbenedetti212/SSC_All_Experiment_Traces) dataset.
 
 ### 2. Velocity Analysis
 
 [![Velocities Vs. Mediums Plot.ipynb](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1sS81tXWN00Iq8fjm3mn0xB5HLt6GLzO4?usp=sharing)
 
-This notebook is to create a velocity vs. medium plot from benchtop experimental data. This includes dry and wet wood (in parallel or perpendicular orientations), soil samples, and aluminum. The notebook produces linear and exponential box-and-whisker plots, as well as a list of average velocities for each medium.
+This notebook generates velocity-versus-medium plots from benchtop experimental data. This includes dry and wet wood (in parallel or perpendicular orientations), soil samples, and aluminum. The notebook produces linear and exponential box-and-whisker plots, as well as a list of average velocities for each medium.
 
 ### 3. Experimental Setup Visualization
 [![SSC Set-Up Figures.ipynb](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1bOT1tAZ1EQi3hTgt5tNan4IpUhe1ZczT?usp=sharing)
@@ -74,8 +95,13 @@ This notebook is used to develop the SSC cross-section and SSC Birds-Eye View fi
 All raw data is stored separately [here on Hugging Face](https://huggingface.co/datasets/mbenedetti212/SSC_All_Experiment_Traces).
 
 ## Preliminary Results
-* ![Soil Compaction Mixtures Table](Soil_Compaction_Mixtures_Table.png).
-* ![P-Wave Velocities from Benchtop Experiments vs. Mediums](P-Wave_Velocities_from_Benchtop_Experiments_vs_Mediums.png).
+<img src="Figures/Soil_Compaction_Mixtures_Table.png" alt="Soil Compaction Mixtures Table" width="500">
+
+*Table 1. Soil mixtures and compaction conditions used to determine the optimal sand-to-clay ratio in soil for SSC experiments.*
+
+<img src="Figures/P-Wave_Velocities_vs_Mediums.png" alt="P-Wave Velocities from Benchtop Experiments vs. Mediums" width="500">
+
+*Figure 7. P-wave velocities measured during benchtop experiments for various media used in the SSC experiments.*
 
 ## Research Status
 
