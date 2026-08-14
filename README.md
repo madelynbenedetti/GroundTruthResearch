@@ -95,11 +95,11 @@ This notebook is used to develop the SSC cross-section and SSC Birds-Eye View fi
 All raw data is stored separately [here on Hugging Face](https://huggingface.co/datasets/mbenedetti212/SSC_All_Experiment_Traces).
 
 ## Preliminary Results
-<img src="Figures/Soil_Compaction_Mixtures_Table.png" alt="Soil Compaction Mixtures Table" width="500">
+<img src="Figures/Soil_Compaction_Mixtures_Table.png" alt="Soil Compaction Mixtures Table" width="800">
 
 *Table 1. Soil mixtures and compaction conditions used to determine the optimal sand-to-clay ratio in soil for SSC experiments.*
 
-<img src="Figures/P-Wave_Velocities_vs_Mediums.png" alt="P-Wave Velocities from Benchtop Experiments vs. Mediums" width="500">
+<img src="Figures/P-Wave_Velocities_vs_Mediums.png" alt="P-Wave Velocities from Benchtop Experiments vs. Mediums" width="800">
 
 *Figure 7. P-wave velocities measured during benchtop experiments for various media used in the SSC experiments.*
 
