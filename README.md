@@ -33,11 +33,11 @@ This research uses the Seismic Soil Chamber (SSC), a wooden box and shop press s
 
 *Figure 2. Photo from a birds-eye view of the Seismic Soil Chamber experimental setup.*
 
-<img src="Figures/SSC_Experiment_1_CS.png" alt="Seismic Soil Chamber Experiment 1 — Cross-Section" width="500">
+<img src="Figures/SSC_Experiment_1_0.0T_CS.png" alt="Seismic Soil Chamber Experiment 1 — Cross-Section" width="500">
 
 *Figure 3. Cross-sectional sensor and experimental configuration for Experiment 1: compacted soil without overlying compaction.*
 
-<img src="Figures/SSC_Experiment_1_BEV.png" alt="Seismic Soil Chamber Experiment 1 — Birds-Eye View" width="500">
+<img src="Figures/SSC_Experiment_1_0.0T_BEV.png" alt="Seismic Soil Chamber Experiment 1 — Birds-Eye View" width="500">
 
 *Figure 4. Birds-eye view of the Experiment 1 sensor and experimental configuration.*
 
